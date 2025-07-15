@@ -15,16 +15,18 @@ Rescue_Camera = modules.camera.Camera(
     lores_size=modules.settings.Rescue_Camera_lores_size,
     pre_callback_func=modules.settings.Rescue_Camera_Pre_Callback_func)
 
-Rescue_Camera.start_cam()
-
-while True:
-  try:
-    pass
-  except KeyboardInterrupt:
-    print("Ending")
-  except Exception as e:
-    modules.log.error(traceback.format_exc())
-    modules.log.error(e)
-    time.sleep(1)
-  finally:
-    Rescue_Camera.stop_cam()
+try:
+  Rescue_Camera.start_cam()
+  
+  while True:
+    try:
+      pass
+    except KeyboardInterrupt:
+      print("Ending")
+      break
+    except Exception as e:
+      modules.log.error(traceback.format_exc())
+      modules.log.error(e)
+      time.sleep(1)
+finally:
+  Rescue_Camera.stop_cam()

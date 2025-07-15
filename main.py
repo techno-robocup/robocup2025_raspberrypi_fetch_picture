@@ -1,7 +1,7 @@
 import modules.uart
 import modules.camera
 import modules.log
-import modules.uart import Message
+from modules.uart import Message
 import traceback
 import sys
 import math

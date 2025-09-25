@@ -8,12 +8,12 @@ import math
 import time
 
 Rescue_Camera = modules.camera.Camera(
-    PORT=modules.settings.Rescue_Camera_PORT,
-    controls=modules.settings.Rescue_Camera_Controls,
-    size=modules.settings.Rescue_Camera_size,
-    formats=modules.settings.Rescue_Camera_formats,
-    lores_size=modules.settings.Rescue_Camera_lores_size,
-    pre_callback_func=modules.settings.Rescue_Camera_Pre_Callback_func)
+    PORT=modules.settings.RESCUE_CAMERA_PORT,
+    controls=modules.settings.RESCUE_CAMERA_CONTROLS,
+    size=modules.settings.RESCUE_CAMERA_SIZE,
+    formats=modules.settings.RESCUE_CAMERA_FORMATS,
+    lores_size=modules.settings.RESCUE_CAMERA_LORES_SIZE,
+    pre_callback_func=modules.settings.RESCUE_CAMERA_PRE_CALLBACK_FUNC)
 
 try:
   Rescue_Camera.start_cam()
